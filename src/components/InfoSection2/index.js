@@ -1,34 +1,31 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-import { Container, Button1 } from '../../globalStyles';
+// import { Link } from 'react-router-dom'
+import { Container } from '../../globalStyles';
 import {
   InfoSec,
   InfoRow,
   InfoColumn,
-  TextWrapper,
   TopLine,
+  TextWrapper,
   Heading,
   Subtitle,
   ImgWrapper,
   Img,
 } from './InfoElements';
 
-const InfoSection = ({
-  primary,
+const InfoSection2 = ({
   lightBg,
-  imgStart,
   lightTopLine,
+  topLine,
+  imgStart,
   lightTextDesc,
   wideTextDesc,
-  buttonLabel,
   description,
   headline,
   lightText,
-  topLine,
   start,
   img,
   alt,
-  buttonLink
 }) => {
   return (
     <>
@@ -37,14 +34,9 @@ const InfoSection = ({
           <InfoRow imgStart={imgStart}>
             <InfoColumn>
               <TextWrapper>
-                <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headline}</Heading>
-                <Subtitle lightTextDesc={lightTextDesc,wideTextDesc}>{description}</Subtitle>
-                <Link to={buttonLink}>
-                  <Button1 big fontBig primary={primary}>
-                    {buttonLabel}
-                  </Button1>
-                </Link>
+                <Subtitle lightTextDesc={lightTextDesc, wideTextDesc}>{description}</Subtitle>
+                <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
               </TextWrapper>
             </InfoColumn>
             <InfoColumn>
@@ -57,10 +49,10 @@ const InfoSection = ({
         </Container>
       </InfoSec>
 
-      
+
     </>
   )
 }
 
 
-export default InfoSection;
+export default InfoSection2;

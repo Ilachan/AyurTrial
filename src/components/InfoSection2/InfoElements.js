@@ -7,7 +7,6 @@ export const InfoSec = styled.div`
 `;
 
 
-
 export const InfoRow = styled.div`
   display: flex;
   margin: 0 -15px -15px -15px;
@@ -49,7 +48,8 @@ export const ImgWrapper = styled.div`
 `;
 
 export const TopLine = styled.div`
-  color: ${({ lightTopLine }) => (lightTopLine ? '#F05D23' : '#FABC3C')};
+  /* color: ${({ lightTopLine }) => (lightTopLine ? '#F05D23' : '#FABC3C')}; */
+  color:#388659;
   font-size: 18px;
   line-height: 16px;
   font-weight: 700;
@@ -71,7 +71,7 @@ export const Heading = styled.h1`
   font-size: 48px;
   line-height: 1.1;
   font-weight: 600;
-  color: ${({ lightText }) => (lightText ? '#388659' : '#1c2237')};
+  color: #F05D23;
 `;
 
 export const Subtitle = styled.p`
@@ -79,5 +79,6 @@ export const Subtitle = styled.p`
   margin-bottom: 35px;
   font-size: 18px;
   line-height: 24px;
+  text-align:justify;
   color: ${({ lightTextDesc }) => (lightTextDesc ? '#48AD72' : '#1c2237')};
 `;

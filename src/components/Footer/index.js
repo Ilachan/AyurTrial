@@ -1,89 +1,129 @@
-import React from 'react'
-import icon1 from '../images/IU.png'
-import{FaFacebook, FaInstagram, FaYoutube, FaTwitter, FaLinkedin} from 'react-icons/fa'
-import { FooterContainer,
-FooterWrap,
-FooterLinksContainer,
-FooterLinksWrapper,
-FooterLinksItems,
-FooterLinkTitle,
-FooterLinkTitle1,
-FooterLink,
-SocialMedia,
-SocialMediaWrap,
-SocialLogo,
-WebsiteRights,
-SocialIcon,
-SocialIconLink 
-} from "./FooterElements";
+import React from 'react';
+import { Button } from '../../globalStyles';
+
+import {
+    FaFacebook,
+    FaInstagram,
+    FaYoutube,
+    FaTwitter,
+    FaLinkedin
+}
+    from 'react-icons/fa';
+
+import {
+    FooterContainer,
+    FooterSubscription,
+    FooterSubHeading,
+    Form,
+    FormInput,
+    FooterLink,
+    FooterLinksContainer,
+    FooterLinksItems,
+    FooterLinkTitle,
+    FooterLinksWrapper,
+    WebsiteRights,
+    SocialIcons,
+    SocialMedia,
+    SocialMediaWrap,
+    SocialLogo,
+    SocialIconLink,
+    SocialIcon
+}
+    from
+    './FooterElements';
 
 const Footer = () => {
     return (
-        <>
-           <FooterContainer>
-               <FooterWrap>
-                   <FooterLinksContainer>
-                       <FooterLinksWrapper>
-                           <FooterLinksItems>
-                               <FooterLinkTitle> <img width="130px" src={icon1}/> </FooterLinkTitle>
-                               </FooterLinksItems>
+        <FooterContainer>
+            {/* <FooterSubscription>
+                <FooterSubHeading>
+                    Join our community!
+               </FooterSubHeading>
+                <FooterSubText>You can subscribe to our blogs!</FooterSubText>
+                <Form>
+                    <FormInput name="email" type="email" placeholder="Your Email" />
+                    <Button fontBig> Subscribe</Button>
+                </Form>
+            </FooterSubscription> */}
+            <FooterLinksContainer>
+                <FooterLinksWrapper>
+                    <FooterLinksItems>
+                        <FooterLinkTitle>About Us</FooterLinkTitle>
+                        <FooterLink to='/sign-in'>How it works</FooterLink>
+                        <FooterLink to='/'>Ayurveda</FooterLink>
+                        <FooterLink to='/'>Terms of Service</FooterLink>
+                    </FooterLinksItems>
 
-                           <FooterLinksItems>
-                           <FooterLinkTitle> Quick Links </FooterLinkTitle>
-                                  <FooterLink to=""> Home </FooterLink>
-                                   <FooterLink to="/about"> About </FooterLink>
-                                   <FooterLink to="/RegisterProperty"> Register Property </FooterLink>
-                                   <FooterLink to="/commercial"> Commercial </FooterLink>
-                                   <FooterLink to="/residential"> Residential </FooterLink>
-                           </FooterLinksItems>
+                    <FooterLinksItems>
+                        <FooterLinkTitle>Clinical Trials</FooterLinkTitle>
+                        <FooterLink to='/sign-in'>How it works</FooterLink>
+                        <FooterLink to='/'>Ayurveda</FooterLink>
+                        <FooterLink to='/'>Blockchain</FooterLink>
+                    </FooterLinksItems>
 
-                       </FooterLinksWrapper>
-                       
-                       <FooterLinksWrapper>
-                       <FooterLinksItems>
-                           <FooterLinkTitle> About Us </FooterLinkTitle>
-                                   <FooterLinkTitle1 to="/signin"> We are student of Iqra university. Our project name is Smart Estate which is based on blockchain development </FooterLinkTitle1>
-                           </FooterLinksItems>
+                </FooterLinksWrapper>
 
-                           <FooterLinksItems>
-                           <FooterLinkTitle> Github  </FooterLinkTitle>
-                                 <a className="GHLink" href="https://github.com/syedasimrazanaqvi"> Asim Raza </a> 
-                                  <a className="GHLink" href="https://github.com/kumailnaqvi354"> Kumail Naqvi </a>
-                                  <a className="GHLink" href="https://github.com/Haseeb96Ahmed"> Haseeb Ahmed </a>
-                                  <a className="GHLink" href="https://github.com/sherryjee">Syed Muhammad Shaheryar</a>
-                           </FooterLinksItems>
-                           </FooterLinksWrapper>
+                <FooterLinksWrapper>
+                    <FooterLinksItems>
+                        <FooterLinkTitle>Blogs</FooterLinkTitle>
+                        <FooterLink to='/'>Ayurveda</FooterLink>
+                        <FooterLink to='/'>Submit Blogs</FooterLink>
+                    </FooterLinksItems>
 
-                   </FooterLinksContainer>
-                    <SocialMedia>
-                        <SocialMediaWrap>
-                            {/* <SocialLogo to='/'>
-                                Smart Estate
-                            </SocialLogo> */}
-                            <WebsiteRights> Smart Estate © {new Date().getFullYear()} All rights reserved.</WebsiteRights>
-                            <SocialIcon>
-                                <SocialIconLink className='link' href='/' target="_blank" aria-label="Facebook">
-                                    <FaFacebook />
-                                </SocialIconLink>
-                                <SocialIconLink className='link' href='/' target="_blank" aria-label="Instagram">
-                                    <FaInstagram />
-                                </SocialIconLink>
-                                <SocialIconLink className='link' href='/' target="_blank" aria-label="Youtube">
-                                    <FaYoutube />
-                                </SocialIconLink>
-                                <SocialIconLink className='link' href='/' target="_blank" aria-label="Twitter">
-                                    <FaTwitter />
-                                </SocialIconLink>
-                                <SocialIconLink className='link' href='/' target="_blank" aria-label="LinkedIn">
-                                    <FaLinkedin />
-                                </SocialIconLink>
-                            </SocialIcon>
-                        </SocialMediaWrap>
-                    </SocialMedia>
-               </FooterWrap>
-               </FooterContainer> 
-        </>
-    )
-}
+                    <FooterLinksItems>
+                        <FooterLinkTitle>Contact Us</FooterLinkTitle>
+                        <FooterLink to='/sign-in'>Contact</FooterLink>
+                        <FooterLink to='/'>Support</FooterLink>
+                    </FooterLinksItems>
+                </FooterLinksWrapper>
 
-export default Footer
+                <FooterLinksWrapper>
+                    <FooterSubscription>
+                        <FooterSubHeading>
+                        Subscribe to our blogs!
+               </FooterSubHeading>
+                        {/* <FooterSubText>You can subscribe to our blogs!</FooterSubText> */}
+                        <Form>
+                            <FormInput name="email" type="email" placeholder="Your Email" />
+                            <Button fontBig> Subscribe</Button>
+                        </Form>
+                    </FooterSubscription>
+
+                </FooterLinksWrapper>
+            </FooterLinksContainer>
+            <SocialMedia>
+                <SocialMediaWrap>
+                    <SocialLogo to='/'>
+                        <SocialIcon />
+            AYURTRIAL
+          </SocialLogo>
+                    <WebsiteRights>  © 2020 Ayutrial, Inc. All Rights Reserved </WebsiteRights>
+                    <SocialIcons>
+                        <SocialIconLink href='/' target='_blank' aria-label='Facebook'>
+                            <FaFacebook />
+                        </SocialIconLink>
+                        <SocialIconLink href='/' target='_blank' aria-label='Instagram'>
+                            <FaInstagram />
+                        </SocialIconLink>
+                        <SocialIconLink
+                            href={'/'}
+                            rel='noopener noreferrer'
+                            target='_blank'
+                            aria-label='Youtube'
+                        >
+                            <FaYoutube />
+                        </SocialIconLink>
+                        <SocialIconLink href='/' target='_blank' aria-label='Twitter'>
+                            <FaTwitter />
+                        </SocialIconLink>
+                        <SocialIconLink href='/' target='_blank' aria-label='LinkedIn'>
+                            <FaLinkedin />
+                        </SocialIconLink>
+                    </SocialIcons>
+                </SocialMediaWrap>
+            </SocialMedia>
+        </FooterContainer>
+    );
+};
+
+export default Footer;

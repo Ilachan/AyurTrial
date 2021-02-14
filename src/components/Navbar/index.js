@@ -1,14 +1,17 @@
 import React from 'react'
 import { FaBars } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import { Nav, 
-    NavbarContainer, 
-    NavLogo, 
-    MobileIcon, 
-    NavMenu, 
-    NavItem, 
-    NavLinks, 
-    NavBtn, 
+import { IconContext } from 'react-icons/lib';
+import { Button } from '../../globalStyles';
+import { Nav,
+    NavbarContainer,
+    NavLogo,
+    NavIcon,
+    MobileIcon,
+    NavMenu,
+    NavItem,
+    NavLinks,
+    NavItemBtn,
     NavBtnLink
  } from "./NavbarElemets";
 
@@ -19,7 +22,7 @@ const Navbar = ({ toggle }) => {
         <Nav>
             <NavbarContainer>
 
-                <NavLogo className="logo" to="/">Smart Estate</NavLogo>
+                <NavLogo className="logo" to="/">AyurTrial</NavLogo>
         
 
                 <MobileIcon onClick={ toggle }>
@@ -33,29 +36,37 @@ const Navbar = ({ toggle }) => {
                     </NavItem>
                     <NavItem >
                        <div className="navitem"> 
-                       <Link className="link" to="about">About</Link></div>
+                       <Link className="link" to='/RegisterProperty'>Add Trial Data</Link></div>
                     </NavItem>
 
                     <NavItem >
                        <div className="navitem"> 
-                       <Link className="link" to="property">Property List</Link></div>
+                       <Link className="link" to="property">View Data</Link></div>
                     </NavItem>
 
                     <NavItem>
                     <div className="navitem">
-                         <Link className="link" to="commercial">Commercial</Link></div>
+                         <Link className="link" to="/HomeRemedy">Home Remedies</Link></div>
                     </NavItem>
                     
                       <NavItem>
                       <div className="navitem">
                            
-                        <Link className="link" to="residential">Residential</Link>
+                        <Link className="link" to="/Blog">Blogs</Link>
                         </div>
                     </NavItem>
              
-            <NavBtn>
-                <Link className="Btn" to='/RegisterProperty'> Register Property </Link>
-            </NavBtn>
+            <NavItemBtn>
+                <Link className="Btn" to='/RegisterProperty'> Sign In </Link>
+            </NavItemBtn>
+
+            {/* <NavItemBtn>
+            <NavBtnLink to="/SignIn">
+                    <Button primary> SIGN IN</Button>
+                  </NavBtnLink>
+            </NavItemBtn> */}
+
+            
 
                 </NavMenu>
             </NavbarContainer>

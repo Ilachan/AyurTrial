@@ -30,24 +30,24 @@ const Sidebar = ({ toggle, isOpen }) => {
                     </SidebarLink>
 
                     <SidebarLink to='about' onClick={toggle}>
-                        <Link className='link' to="about">About</Link>
+                        <Link className='link' to="/RegisterProperty">Add trial data</Link>
                     </SidebarLink>
 
 
                     <SidebarLink to='property' onClick={toggle}>
-                        <Link className='link' to="property">Property List</Link>
+                        <Link className='link' to="property">View Data</Link>
                     </SidebarLink>
 
                     <SidebarLink to='commercial' onClick={toggle}>
-                        <Link className='link' to="commercial">Commercial</Link>
+                        <Link className='link' to="/HomeRemedy">Home Remedies</Link>
                     </SidebarLink>
 
                     <SidebarLink to='residential' onClick={toggle}>
-                        <Link className='link' to="residential">Residential</Link>
+                        <Link className='link' to="/Blog">Blogs</Link>
                     </SidebarLink>
 
                     <SidebarLink to='RegisterProperty ' onClick={toggle}>
-                        <Link className='Btn' to='/RegisterProperty'> Register Property </Link>
+                        <Link className='Btn' to='/RegisterProperty'> Sign In </Link>
                     </SidebarLink>
 
 
